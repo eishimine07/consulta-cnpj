@@ -1,0 +1,67 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:vue/vue3-recommended",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.spec.{j,t}s?(x)", "vite.config.{j,t}s", "vitest.setup.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    },
+    {
+      "files": ["**/*.spec.{j,t}s?(x)"],
+      "globals": {
+        "afterEach": "readonly",
+        "beforeEach": "readonly",
+        "describe": "readonly",
+        "expect": "readonly",
+        "it": "readonly",
+        "vi": "readonly"
+      }
+    }
+  ],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json",
+    "ecmaVersion": 14,
+    "extraFileExtensions": [".vue"],
+    "parser": {
+      "js": "@typescript-eslint/parser",
+      "ts": "@typescript-eslint/parser",
+      "<template>": "espree"
+    }
+  },
+  "plugins": ["@typescript-eslint", "import"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "no-console": "warn",
+    "vue/component-tags-order": [
+      "error",
+      {
+        "order": ["script", "template", "style"]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}

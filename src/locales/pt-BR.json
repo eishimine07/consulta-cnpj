@@ -1,0 +1,21 @@
+{
+  "component": {
+    "form": {
+      "description": "Insira o número do CNPJ",
+      "submit": "Consultar"
+    }
+  },
+  "error": {
+    "companyNotFound": "Empresa não encontrada",
+    "required": "Campo não pode ser vazio",
+    "requiredCNPJ": "CNPJ inválido"
+  },
+  "home": {
+    "title": "Consulta de CNPJ"
+  },
+  "$vuetify": {
+    "close": "Fechar",
+    "loading": "Carregando",
+    "open": "Abrir"
+  }
+}
