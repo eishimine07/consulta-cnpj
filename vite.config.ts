@@ -1,18 +1,18 @@
 /// <reference types="vitest" />
 import path from 'path'
-import { sentryVitePlugin } from '@sentry/vite-plugin'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import vuetify from 'vite-plugin-vuetify'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(() => {
   const plugins = [
     vue(),
     vuetify({ autoImport: true }),
   ]
 
   return {
+    base: '/consulta-cnpj/',
     build: {
       sourcemap: true,
     },
