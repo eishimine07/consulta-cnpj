@@ -1,12 +1,11 @@
 <script setup lang="ts">
-type PartnersDetails = string[]
+type PartnersDetails = string[];
 
-const partnersDetails = defineModel<PartnersDetails>()
-const rules = [];
+const partnersDetails = defineModel<PartnersDetails>();
 </script>
 
 <template>
-  <div>
+  <div v-if="partnersDetails">
     <h2 class="mx-4">{{ $t('component.partnersDetails.title') }}</h2>
 
     <v-container class="mt-2">
@@ -19,7 +18,6 @@ const rules = [];
             v-model="partnersDetails[index]"
             hide-details="auto"
             :label="$t('component.partnersDetails.partner', { n: index + 1 })"
-            :rules="rules"
             variant="outlined"
           />
         </v-col>

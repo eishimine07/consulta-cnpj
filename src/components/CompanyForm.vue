@@ -5,26 +5,44 @@ import CNAEDetails from '@/components/CNAEDetails.vue';
 import CompanyDetails from '@/components/CompanyDetails.vue';
 import PartnersDetails from '@/components/PartnersDetails.vue';
 import formatCNPJ from '@/helpers/formatCNPJ';
+import formatPhone from '@/helpers/formatPhone';
 import useCompanyStore from '@/stores/company';
 
 const date = useDate();
 const companyStore = useCompanyStore();
-const companyDetails = ref({
-  cnpj: formatCNPJ(companyStore.company.cnpj),
-  name: companyStore.company.nome,
-  businessName: companyStore.company.razaoSocial,
-  email: companyStore.company.email,
-  establishmentDate: date.format(companyStore.company.dataDeAbertura, 'keyboardDate'),
-  status: companyStore.company.situacao,
-  address: companyStore.company.endereçoCompleto,
-  phone: companyStore.company.telefone,
-  legalNature: companyStore.company.naturezaJuridica,
-});
-const cnaeDetails = ref({
-  primary: `${companyStore.company.atividadePrincipal.codigo} - ${companyStore.company.atividadePrincipal.descricao}`,
-  secondary: companyStore.company.atividadesSecundarias.map((aS) => `${aS.codigo} - ${aS.descricao}` ),
-});
-const partnersDetails = ref(companyStore.company.socios.map((s) => `${s.nome} ${s.qualificacao ? `(${s.qualificacao})` : ''}`));
+const companyDetails = ref(
+  companyStore.company ? {
+    cnpj: formatCNPJ(companyStore.company.cnpj),
+    name: companyStore.company.nome,
+    businessName: companyStore.company.razaoSocial,
+    email: companyStore.company.email,
+    establishmentDate: date.format(companyStore.company.dataDeAbertura, 'keyboardDate'),
+    status: companyStore.company.situacao,
+    address: companyStore.company.endereçoCompleto,
+    phone: formatPhone(companyStore.company.telefone),
+    legalNature: companyStore.company.naturezaJuridica,
+  } : {
+    cnpj: '',
+    name: '',
+    businessName: '',
+    email: '',
+    establishmentDate: '',
+    status: '',
+    address: '',
+    phone: '',
+    legalNature: '',
+  }
+);
+const cnaeDetails = ref(
+  companyStore.company ? {
+    primary: `${companyStore.company.atividadePrincipal.codigo} - ${companyStore.company.atividadePrincipal.descricao}`,
+    secondary: companyStore.company.atividadesSecundarias.map((aS) => `${aS.codigo} - ${aS.descricao}` ),
+  } : {
+    primary: '',
+    secondary: [],
+  }
+);
+const partnersDetails = ref(companyStore.company?.socios.map((s) => `${s.nome} ${s.qualificacao ? `(${s.qualificacao})` : ''}`) ?? []);
 const isFormValid = ref<boolean>(false);
 
 const onSubmit = () => {

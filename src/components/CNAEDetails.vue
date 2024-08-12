@@ -5,11 +5,10 @@ type CNAEDetails = {
 }
 
 const cnaeDetails = defineModel<CNAEDetails>()
-const rules = [];
 </script>
 
 <template>
-  <div>
+  <div v-if="cnaeDetails">
     <h2 class="mx-4">{{ $t('component.cnaeDetails.title') }}</h2>
 
     <v-container class="mt-2">
@@ -19,7 +18,6 @@ const rules = [];
             v-model="cnaeDetails.primary"
             hide-details="auto"
             :label="$t('component.cnaeDetails.mainActivity')"
-            :rules="rules"
             variant="outlined"
           />
         </v-col>

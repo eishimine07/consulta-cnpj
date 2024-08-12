@@ -29,7 +29,7 @@ const rules = {
 }
 
 const fetchCompany = () => {
-  if (!isFormValid.value) {
+  if (!isFormValid.value || !cnpj.value) {
     return;
   }
 

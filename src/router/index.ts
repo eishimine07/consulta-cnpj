@@ -3,8 +3,8 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 const routes: RouteRecordRaw[] = [
   {
     path: '/consulta-cnpj',
-    component: () => import('@/views/HomeView.vue'),
-    name: 'home',
+    component: () => import('@/views/CNPJSearchView.vue'),
+    name: 'cnpjSearch',
   },
 ];
 
