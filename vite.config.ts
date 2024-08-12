@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-import path from 'path'
+import { fileURLToPath } from 'url'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import vuetify from 'vite-plugin-vuetify'
@@ -19,7 +19,7 @@ export default defineConfig(() => {
     plugins,
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './src'),
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
     server: {
