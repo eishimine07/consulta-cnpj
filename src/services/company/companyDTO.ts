@@ -7,6 +7,7 @@ type QSA = {
   identificador_de_socio: number
   nome_socio: string
   cnpj_cpf_do_socio: string
+  qualificacao_socio: string
   codigo_qualificacao_socio: number
   percentual_capital_social: number
   data_entrada_sociedade: string // Date
@@ -27,6 +28,7 @@ type CompanyDTO = {
   motivo_situacao_cadastral: number
   nome_cidade_exterior?: string
   codigo_natureza_juridica: number
+  natureza_juridica: string
   data_inicio_atividade: string // Date
   cnae_fiscal: number
   cnae_fiscal_descricao: string

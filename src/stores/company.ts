@@ -9,11 +9,13 @@ const useCompanyStore = defineStore('company', () => {
   const company = ref<Company | null>(null);
   const errorMessage = ref<string>('');
   const isLoading = ref<boolean>(false);
+  const dirty = ref(false);
 
   async function fetchCompany(cnpj: string): Promise<void> {
     isLoading.value = true;
     errorMessage.value = '';
     company.value = null;
+    dirty.value = false;
 
     const response = await getCompanyByCNPJ(cnpj);
 
@@ -28,6 +30,7 @@ const useCompanyStore = defineStore('company', () => {
 
   return {
     company: readonly(company),
+    dirty,
     errorMessage: readonly(errorMessage),
     fetchCompany,
     isLoading: readonly(isLoading),

@@ -1,10 +1,6 @@
 type Partner = {
-  identificadorDeSocio: number
-  nomeSocio: string
-  cnpjCpfDoSocio: string
-  codigoQualificacaoSocio: number
-  percentualCapitalSocial: number
-  dataEntradaSociedade: Date
+  nome: string
+  qualificacao?: string
 }
 
 export default Partner;

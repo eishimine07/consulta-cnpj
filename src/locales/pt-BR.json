@@ -1,8 +1,38 @@
 {
   "component": {
-    "form": {
+    "cnaeDetails": {
+      "title": "CNAE",
+      "mainActivity": "Atividade Principal"
+    },
+    "companyDetails": {
+      "cnpj": "CNPJ",
+      "name": "Nome Fantasia",
+      "businessName": "Razão Social",
+      "legalNature": "Natureza jurídica",
+      "establishmentDate": "Data de Abertura",
+      "status": "Situação",
+      "address": "Endereço",
+      "phone": "Telefone",
+      "email": "E-mail",
+      "submit": "Salvar",
+      "title": "Dados da empresa"
+    },
+    "companyForm": {
+      "submit": "Salvar"
+    },
+    "cnpjSearchform": {
+      "alert": {
+        "cancel": "Cancelar",
+        "confirm": "Continuar",
+        "message": "Ao fazer uma nova consulta, todas as suas alterações serão perdidas. Tem certeza de que deseja continuar?",
+        "title": "Informações Não Salvas"
+      },
       "description": "Insira o número do CNPJ",
       "submit": "Consultar"
+    },
+    "partnersDetails": {
+      "title": "Sócios",
+      "partner": "Sócio {n}"
     }
   },
   "error": {
@@ -11,6 +41,7 @@
     "requiredCNPJ": "CNPJ inválido"
   },
   "home": {
+    "loadingCompany": "Buscango dados da empresa",
     "title": "Consulta de CNPJ"
   },
   "$vuetify": {

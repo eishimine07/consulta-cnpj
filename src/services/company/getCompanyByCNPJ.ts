@@ -6,22 +6,29 @@ import CompanyDTO from '@/services/company/companyDTO';
 
 function toModel(dto: CompanyDTO): Company {
   return {
-    atividadePrincipal: `${dto.cnae_fiscal} - ${dto.cnae_fiscal_descricao}`,
+    atividadePrincipal: { codigo: dto.cnae_fiscal, descricao: dto.cnae_fiscal_descricao },
+    atividadesSecundarias: dto.cnaes_secundarios,
     cnpj: dto.cnpj,
     dataDeAbertura: new Date(dto.data_inicio_atividade),
     email: dto.email,
     endereçoCompleto: formatAddress({
       city: dto.municipio,
+      complement: dto.complemento,
       neighborhood: dto.bairro,
       number: dto.numero,
       state: dto.uf,
       street: `${dto.descricao_tipo_de_logradouro} ${dto.logradouro}`,
       zipCode: `${dto.cep}`,
     }),
+    naturezaJuridica: dto.natureza_juridica,
     nome: dto.nome_fantasia,
     razaoSocial: dto.razao_social,
     situacao: dto.descricao_situacao_cadastral,
     telefone: dto.ddd_telefone_1,
+    socios: dto.qsa.map((s) => ({
+      nome: s.nome_socio,
+      qualificacao: s.qualificacao_socio,
+    })),
   };
 }
 
