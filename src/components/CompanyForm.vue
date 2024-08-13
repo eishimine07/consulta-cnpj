@@ -47,9 +47,6 @@ const isFormValid = ref<boolean>(false);
 
 const onSubmit = () => {
   // TODO - Salvar as informações
-  console.log(companyDetails.value);
-  console.log(cnaeDetails.value);
-  console.log(partnersDetails.value);
 };
 
 watch(

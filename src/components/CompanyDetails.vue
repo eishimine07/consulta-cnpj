@@ -21,7 +21,7 @@ const legalNature = defineModel<string>('legalNature');
             v-model="cnpj"
             hide-details="auto"
             :label="$t('component.companyDetails.cnpj')"
-            readonly
+            disabled
             variant="outlined"
             data-test="company-details__input-cnpj"
           />
