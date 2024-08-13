@@ -41,8 +41,3 @@ Para rodar algum teste específico
 ```bash
 npm run test NOME_DO_ARQUIVO_TESTE
 ```
-
-Caso queira rodar ou precise debugar um teste específico, use o seguinte comando para abrir a interface do cypress
-```bash
-pnpm cy:open-e2e
-```
