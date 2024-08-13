@@ -6,7 +6,7 @@
 - [Rodando os testes](#rodando-os-testes)
 
 ## Descrição
-Tela para consultar informações de empresas a partir do CNPJ. O projeto usa a API da BrasilAPI para consultar as informações.
+Tela para consultar informações de empresas a partir do CNPJ. O projeto usa a API da BrasilAPI para buscar as informações.
 
 ## Tech Stack
 - Vue 3
