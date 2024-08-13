@@ -71,11 +71,21 @@ watch(
       validate-on="input"
       @submit.prevent="onSubmit"
     >
-      <CompanyDetails v-model="companyDetails" />
+      <CompanyDetails
+        v-model:cnpj="companyDetails.cnpj"
+        v-model:name="companyDetails.name"
+        v-model:businessName="companyDetails.businessName"
+        v-model:email="companyDetails.email"
+        v-model:establishmentDate="companyDetails.establishmentDate"
+        v-model:status="companyDetails.status"
+        v-model:address="companyDetails.address"
+        v-model:phone="companyDetails.phone"
+        v-model:legalNature="companyDetails.legalNature"
+      />
 
-      <CNAEDetails v-model="cnaeDetails" />
+      <CNAEDetails v-model:primary="cnaeDetails.primary" />
 
-      <PartnersDetails v-model="partnersDetails" />
+      <PartnersDetails v-model:partners="partnersDetails" />
 
       <v-btn
         block
