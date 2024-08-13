@@ -11,7 +11,7 @@ function toModel(dto: CompanyDTO): Company {
     cnpj: dto.cnpj,
     dataDeAbertura: new Date(dto.data_inicio_atividade),
     email: dto.email,
-    endereçoCompleto: formatAddress({
+    enderecoCompleto: formatAddress({
       city: dto.municipio,
       complement: dto.complemento,
       neighborhood: dto.bairro,

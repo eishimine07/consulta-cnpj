@@ -1,5 +1,7 @@
+import getDigitsOnly from '@/helpers/getDigitsOnly';
+
 export default function formatPhone(phone: string): string {
-  const phoneOnlyDigits = phone.replace(/\D/g, '');
+  const phoneOnlyDigits = getDigitsOnly(phone);
 
   // Se o número for menor que 10 dígitos, retorna o valor original
   if (phoneOnlyDigits.length < 10 || phoneOnlyDigits.length > 11) {

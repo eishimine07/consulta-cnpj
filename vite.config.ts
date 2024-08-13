@@ -13,9 +13,6 @@ export default defineConfig(() => {
 
   return {
     base: '/consulta-cnpj/',
-    build: {
-      sourcemap: true,
-    },
     plugins,
     resolve: {
       alias: {

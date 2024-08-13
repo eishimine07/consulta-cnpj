@@ -5,7 +5,7 @@ type Company = {
   cnpj: string
   dataDeAbertura: Date
   email: string
-  endereçoCompleto: string
+  enderecoCompleto: string
   naturezaJuridica: string
   nome: string
   razaoSocial: string

@@ -18,7 +18,7 @@ const companyDetails = ref(
     email: companyStore.company.email,
     establishmentDate: date.format(companyStore.company.dataDeAbertura, 'keyboardDate'),
     status: companyStore.company.situacao,
-    address: companyStore.company.endereçoCompleto,
+    address: companyStore.company.enderecoCompleto,
     phone: formatPhone(companyStore.company.telefone),
     legalNature: companyStore.company.naturezaJuridica,
   } : {

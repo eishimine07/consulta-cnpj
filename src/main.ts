@@ -11,28 +11,11 @@ const app = createApp(App)
 const pinia = createPinia()
 
 const i18nOptions: I18nOptions = {
-  datetimeFormats: {
-    'pt-BR': {
-      short: {
-        day: '2-digit', month: '2-digit', year: 'numeric'
-      },
-      shortWithoutDay: {
-        month: '2-digit', year: 'numeric'
-      }
-    }
-  },
   legacy: false,
   locale: 'pt-BR',
   messages: {
     'pt-BR': ptBR,
   },
-  numberFormats: {
-    'pt-BR': {
-      currency: {
-        style: 'currency', currency: 'BRL'
-      }
-    }
-  }
 }
 const i18n = createI18n(i18nOptions)
 
