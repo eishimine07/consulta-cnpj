@@ -23,6 +23,7 @@ const legalNature = defineModel<string>('legalNature');
             :label="$t('component.companyDetails.cnpj')"
             readonly
             variant="outlined"
+            data-test="company-details__input-cnpj"
           />
         </v-col>
 
@@ -32,6 +33,7 @@ const legalNature = defineModel<string>('legalNature');
             hide-details="auto"
             :label="$t('component.companyDetails.name')"
             variant="outlined"
+            data-test="company-details__input-name"
           />
         </v-col>
       </v-row>
@@ -43,6 +45,7 @@ const legalNature = defineModel<string>('legalNature');
             hide-details="auto"
             :label="$t('component.companyDetails.businessName')"
             variant="outlined"
+            data-test="company-details__input-businessName"
           />
         </v-col>
 
@@ -52,6 +55,7 @@ const legalNature = defineModel<string>('legalNature');
             hide-details="auto"
             :label="$t('component.companyDetails.legalNature')"
             variant="outlined"
+            data-test="company-details__input-legalNature"
           />
         </v-col>
       </v-row>
@@ -63,6 +67,7 @@ const legalNature = defineModel<string>('legalNature');
             hide-details="auto"
             :label="$t('component.companyDetails.status')"
             variant="outlined"
+            data-test="company-details__input-status"
           />
         </v-col>
 
@@ -72,6 +77,7 @@ const legalNature = defineModel<string>('legalNature');
             hide-details="auto"
             :label="$t('component.companyDetails.establishmentDate')"
             variant="outlined"
+            data-test="company-details__input-establishmentDate"
           />
         </v-col>
       </v-row>
@@ -83,6 +89,7 @@ const legalNature = defineModel<string>('legalNature');
             hide-details="auto"
             :label="$t('component.companyDetails.phone')"
             variant="outlined"
+            data-test="company-details__input-phone"
           />
         </v-col>
 
@@ -92,6 +99,7 @@ const legalNature = defineModel<string>('legalNature');
             hide-details="auto"
             :label="$t('component.companyDetails.email')"
             variant="outlined"
+            data-test="company-details__input-email"
           />
         </v-col>
       </v-row>
@@ -103,6 +111,7 @@ const legalNature = defineModel<string>('legalNature');
             hide-details="auto"
             :label="$t('component.companyDetails.address')"
             variant="outlined"
+            data-test="company-details__input-address"
           />
         </v-col>
       </v-row>

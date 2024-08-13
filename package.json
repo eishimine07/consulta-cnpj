@@ -40,7 +40,6 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-vue": "^9.26.0",
     "jsdom": "^24.1.0",
-    "resize-observer-polyfill": "^1.5.1",
     "sass": "^1.76.0",
     "typescript": "^5.5.2",
     "vite": "^5.2.8",
