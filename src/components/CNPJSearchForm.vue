@@ -93,6 +93,7 @@ const onClickConfirm = () => {
   <v-dialog
     v-model="showAlert"
     persistent
+    data-test="cnpj-search-form__alert"
   > 
     <v-card
       class="ma-auto"

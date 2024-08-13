@@ -29,6 +29,7 @@ onUnmounted(() => {
     v-show="show"
     :icon="mdiArrowUp"
     class="scroll-button"
+    data-test="scroll-button"
     @click="onClick"
   />
 </template>
